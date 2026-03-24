@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<center><title>BIO DATA FORM</title>
+<style>
+    body{background-color:greenyellow}
+</style>
+<script>
+function validateForm(){
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
+let phone=document.getElementById("phone").value;
+let pincode=document.getElementById("pincode").value;
+
+if(name==""){
+alert("Enter Full Name");
+return false;
+}
+
+if(email==""){
+alert("Enter Email");
+return false;
+}
+
+if(password.length<6){
+alert("Password must be at least 6 characters");
+return false;
+}
+
+if(phone.length!=10){
+alert("Enter valid phone number");
+return false;
+}
+
+if(pincode.length!=6){
+alert("Enter valid pincode");
+return false;
+}
+
+let hobbies=document.querySelectorAll('input[name="hobby"]:checked');
+
+if(hobbies.length<2){
+alert("Select at least 2 hobbies");
+return false;
+}
+
+alert("Form Submitted Successfully");
+return true;
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>BIO DATA FORM</h1>
+
+<form onsubmit="return validateForm()">
+
+<b>Full Name:<br></b>
+<input type="text" id="name"><br><br>
+
+<b>Profile Photo:<br></b>
+<input type="file"><br><br>
+
+<b>Email Address:<br></b>
+<input type="email" id="email"><br><br>
+
+<b>Password:<br></b>
+<input type="password" id="password"><br><br>
+
+<b>Phone Number:<br></b>
+<input type="text" id="phone"><br><br>
+
+<b>Date of Birth:<br></b>
+<input type="date"><br><br>
+
+<b>Gender:<br></b>
+<input type="radio" name="gender">Male
+<input type="radio" name="gender">Female<br><br>
+
+<b>Address:<br></b>
+<textarea rows="3" cols="30"></textarea><br><br>
+
+<b>City:<br></b>
+<input type="text"><br><br>
+
+<b>State:<br></b>
+<input type="text"><br><br>
+
+<b>Country:<br></b>
+<select>
+<option>India</option>
+<option>USA</option>
+<option>UK</option>
+</select><br><br>
+
+<b>Pincode:<br></b>
+<input type="text" id="pincode"><br><br>
+
+<b>Hobbies:<br></b>
+<input type="checkbox" name="hobby">Reading
+<input type="checkbox" name="hobby">Music
+<input type="checkbox" name="hobby">Sports
+<input type="checkbox" name="hobby">Travel<br><br>
+
+<b>Skills:<br></b>
+<select multiple>
+<option>HTML</option>
+<option>CSS</option>
+<option>JavaScript</option>
+<option>Python</option>
+</select><br><br>
+
+<b>LinkedIn Profile:<br></b>
+<input type="url"><br><br>
+
+<b>Portfolio Website:<br></b>
+<input type="url"><br><br>
+
+<b>About Yourself:<br></b>
+<textarea rows="4" cols="30"></textarea><br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+
+</body></center>
+</html>
