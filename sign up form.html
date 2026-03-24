@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up Form</title>
+
+<script>
+function validateForm(){
+
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var password = document.getElementById("password").value;
+
+if(name == ""){
+alert("Please enter your name");
+return false;
+}
+
+if(email == ""){
+alert("Please enter your email");
+return false;
+}
+
+if(password.length < 6){
+alert("Password must be at least 6 characters");
+return false;
+}
+
+alert("Sign Up Successful!");
+return true;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Sign Up Form</h2>
+
+<form onsubmit="return validateForm()">
+
+Name:<br>
+<input type="text" id="name"><br><br>
+
+Email:<br>
+<input type="text" id="email"><br><br>
+
+Password:<br>
+<input type="password" id="password"><br><br>
+
+<input type="submit" value="Sign Up">
+
+</form>
+
+</body>
+</html>
